@@ -7,14 +7,14 @@ import urllib.parse
 
 app = Flask(__name__)
 
-@app.route('/test',methods = ['GET','POST'])
-def hello_world():
-    if request.method == 'GET':
-        return jsonify({"response": "Get request called"})
-    elif request.method == 'POST':
-        req_Json = request.json
-        name = req_Json['name']
-        return jsonify({'reponse': 'Hi '+ name})
+# @app.route('/test',methods = ['GET','POST'])
+# def hello_world():
+#     if request.method == 'GET':
+#         return jsonify({"response": "Get request called"})
+#     elif request.method == 'POST':
+#         req_Json = request.json
+#         name = req_Json['name']
+#         return jsonify({'reponse': 'Hi '+ name})
 
 #@app.route('/movie/<string:a>',methods=['POST'])
 #def print_list(a):
