@@ -1,16 +1,18 @@
 import pandas as pd
 import sqlite3
+import settings.py
 
 def book_output(name):
     meow=[]
     mi_list=[]
     a = 0
-    conn=sqlite3.connect("bookdatabaseop.sqlite")
+    # conn=sqlite3.connect("bookdatabaseop.sqlite")
     b=conn.cursor()
     b.execute("SELECT * FROM booksfinal")
     movies=b.fetchall()
-    con=sqlite3.connect('BOOKSCOREdata.sqlite')
-    c=con.cursor()
+    # con=sqlite3.connect('BOOKSCOREdata.sqlite')
+    # con = conn2
+    c=conn2.cursor()
     c.execute("SELECT * FROM OP_books")
     data=c.fetchall()
     for row in movies:
@@ -18,7 +20,7 @@ def book_output(name):
         if g[4] == name:
             a = int(g[0])
             break
-    
+
 
     for row in data:
         l=list(row)

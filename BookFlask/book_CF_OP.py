@@ -1,5 +1,7 @@
 import pandas as pd
 import sqlite3
+
+
 conn=sqlite3.connect("booksdata.sqlite")
 b=conn.cursor()
 b.execute("SELECT * FROM book1")
@@ -37,4 +39,3 @@ for item in mi_list:
                 # print(mdict)
                  meow.append(mdict)
 print(meow)
-
